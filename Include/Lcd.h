@@ -63,8 +63,6 @@
     //Generacion de numero grandes
     #define JUST_RIGHT 0x10  //Numeros con justificacion derecha de la pantalla
     #define JUST_LEFT 0x11   //Numeros con justificacion izquierda de la pantalla
-#endif
-
 
 /*------------------------------------------------------------------------------
                             FUNCTION PROTOTYPES
@@ -77,3 +75,4 @@ void LCD_date(char date);                                   // Envia un caracter
 void LCD_shift(unsigned char dir,unsigned char cant);       // Realiza un corrimiento
 void LCD_character(unsigned char adress,char caracter[]);   // Genera un caracter especial
 
+#endif

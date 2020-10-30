@@ -1,12 +1,9 @@
-#ifndef XC_SOFT_I2C_H
-#define XC_SOFT_I2C_H
-#endif
-
-
 #ifndef _XTAL_FREQ
 #error  Debe definir la frecuencia del oscilador
 #endif
 
+#ifndef SOFT_I2C_H
+#define SOFT_I2C_H
 
 //Definiciones de pines para utilizar
 #define SDA_TRIS    TRISBbits.TRISB0
@@ -36,3 +33,5 @@ void i2c_ack(void);             // Condicion de ack
 void i2c_nack(void);            // Condicion de nack 
 void i2c_clock(char speed);     // Clock del i2c
 void i2c_array(const char *);   // Envia una cadena de caracteres
+
+#endif

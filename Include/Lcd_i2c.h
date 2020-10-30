@@ -2,26 +2,13 @@
 #error  Debe definir la frecuencia del oscilador
 #endif
 
-#ifndef XC_SOFT_I2C_H
-//#include "C:\Users\aguat\Documents\MPLAB PROJECTS\Librerias XC8\Include\I2c_Hard.h"
-#include "C:\Users\aguat\Documents\MPLAB PROJECTS\Librerias XC8\Include\I2c_Soft.h"
+//Debe Incluirse la libreria para la comunicacion I2c 
+#ifndef Libreria_i2c
+#error Debe incluir la libreria i2c para poder comunicarlo
 #endif
 
-
-#ifndef XC_LCD_I2C_H
-    #define XC_LCD_I2C_H
-    
-    //Configuraciones de pines
-    //#define BACKLIGHT_PIN   PORTBbits.RB0
-    //#define BACKLIGHT_TRIS  TRISBbits.TRISB0
-    //#define RS_PIN      PORTDbits.RD1
-    //#define RS_TRIS     TRISDbits.TRISD1
-    //#define RW_PIN      PORTDbits.RD2
-    //#define RW_TRIS     TRISDbits.TRISD2
-    //#define E_PIN       PORTDbits.RD3
-    //#define E_TRIS      TRISDbits.TRISD3
-    //#define BITS_PIN    PORTD
-    //#define BITS_TRIS   TRISD
+#ifndef LCD_I2C_H
+    #define LCD_I2C_H
     
     //Funciones del lcd
     #define CLEAR 0x01                  //Limpiar el display
@@ -63,8 +50,6 @@
     #define LCD_20X4 0x02    //Numero grandes para Lcd 20x4
     #define JUST_RIGHT 0x10  //Numeros con justificacion derecha de la pantalla
     #define JUST_LEFT 0x11   //Numeros con justificacion izquierda de la pantalla
-#endif
-
 
 void LCD_init(void);
 void LCD_command(unsigned char cmd);
@@ -73,3 +58,5 @@ void LCD_xy(int x,int y);
 void LCD_date(char date);
 void LCD_shift(unsigned char dir,unsigned char cant);
 void LCD_character(unsigned char adress,char caracter[]);
+
+#endif
