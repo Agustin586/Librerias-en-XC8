@@ -2,6 +2,10 @@
 #error Debe definir la frecuencia del oscilador
 #endif
 
+#ifndef Libreria_i2c
+#error Debe incluir una libreria i2c para comunicarlo con el rtc, luego debe comentar esta condicion
+#endif
+
 #ifndef RTC3231_H
 #define RTC3231_H
 
