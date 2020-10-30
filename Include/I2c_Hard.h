@@ -7,6 +7,9 @@
 #error  Debe definir la frecuencia del oscilador
 #endif
 
+#ifndef I2C_HARD_H
+#define I2C_HARD_H
+
 //Definiciones de pines para utilizar
 #define SDATRIS TRISCbits.TRISC4
 #define SCLTRIS TRISCbits.TRISC3
@@ -19,3 +22,5 @@ char i2c_read(void);
 void i2c_ack(void);
 void i2c_nack(void);
 char i2c_write(char I2C_data);
+
+#endif
