@@ -2,8 +2,8 @@
 #error Debe definir la frecuencia del oscilador
 #endif
 
-#ifndef XC_RTC3231_H
-#define XC_RTC3231_H
+#ifndef RTC3231_H
+#define RTC3231_H
 
 _Bool mod_rtc=0,esc_rtc=0,val_rtc=0;
 char hora=0,min=0,seg=0,dia=0,mes=0,year=0,pos_rtc=1;
