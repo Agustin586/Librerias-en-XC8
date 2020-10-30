@@ -1,10 +1,9 @@
-#ifndef XC_UART_HARD_H
-#define XC_UART_HARD_H
-#endif
-
 #ifndef _XTAL_FREQ
 #error  Debe definir la frecuencia del oscilador
 #endif
+
+#ifndef UART_HARD_H
+#define UART_HARD_H
 
 //Definiciones de funciones
 #define Serial_Hard_init    UART_init 
@@ -27,3 +26,5 @@ void UART_write(char dato);                                         // Escribe u
 void UART_array(const char* cadena);                                // Envia una cadena de caracteres
 void UART_arrayln(const char *cadena);                              // Envia una cadena con un salto de linea
 char UART_read(void);                                               // Lee un caracter
+
+#endif
