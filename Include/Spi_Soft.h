@@ -1,10 +1,9 @@
-#ifndef XC_SOFT_SPI_H
-#define XC_SOFT_SPI_H
+#ifndef _XTAL_FREQ
+#error Debe definir la frecuencia del oscilador
 #endif
 
-#ifndef XC_CONFIGURACION_H
-    #include "CONFIG_PIC.h"
-#endif
+#ifndef SOFT_SPI_H
+#define SOFT_SPI_H
 
 #define MFRC522_CS              LATB0   // SS1
 #define MFRC522_CS2             LATB1   // SS2
@@ -36,3 +35,5 @@ void Soft_SPI_Init(void);           // Inicializa el spi
 void Soft_SPI_Write(char dato_);    // Envia un caracter por spi
 void SPI_array(const char *cadena); // Envia una cadena por spi
 unsigned char  Soft_SPI_Read();     // Lee un caracter por spi
+
+#endif
