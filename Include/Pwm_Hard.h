@@ -1,5 +1,11 @@
 #include <xc.h>
-#define _XTAL_FREQ 4000000
+
+#ifndef _XTAL_FREQ
+#error Debe definir la frecuencia del oscilador
+#endif
+
+#ifndef PWM_HARD_H
+#define PWM_HARD_H
 
 unsigned int freq=0;
 /*------------------------------------------------------------------------------
@@ -14,3 +20,4 @@ void PWM_init_2(unsigned int frecuencia);
 void PWM_2(char duty);
 void PWM_Stop_2(void);
 
+#endif
